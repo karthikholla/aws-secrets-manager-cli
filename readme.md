@@ -8,7 +8,7 @@ This only supports "other type of secret" in aws secrets manager (Not RDS, Docum
 This only uses default AWS KMS Encryption which is good enough for most
 usecases
 
-Only supports a Plaintext setup not KV Store
+Only supports a **Plaintext setup not KV JSON blobs**
 
 Usage
 ==========
