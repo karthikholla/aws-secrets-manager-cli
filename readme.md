@@ -3,12 +3,12 @@ Why?
 
 Because simple cli is needed for running in CICD Pipeline to just work
 
-This only supports other type of secret in aws secrets manager (Not RDS, DocumentDB)
+This only supports "other type of secret" in aws secrets manager (Not RDS, DocumentDB)
 
 This only uses default AWS KMS Encryption which is good enough for most
 usecases
 
-Only supports a single string not KV Store
+Only supports a Plaintext setup not KV Store
 
 Usage
 ==========
