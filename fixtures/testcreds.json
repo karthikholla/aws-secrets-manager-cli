@@ -1,0 +1,7 @@
+{
+   "mongodb_user": "abcd",
+   "mongodb_password": "efgh",
+   "mongodb_db": "db",
+   "mongodb_port": "3000",
+   "mongodb_url": "https://mongodb.com"
+}
