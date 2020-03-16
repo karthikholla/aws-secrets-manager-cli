@@ -35,7 +35,7 @@ $ secret read tutorial/hogehoge
 
 $ export SECRET=`secret read tutorial/hogehoge`
 $ echo $SECRET
-"fugafuga"
+fugafuga
 
 $ secret ensure tutorial/hogehoge # exit 0
 ...
@@ -45,10 +45,30 @@ $ secret ensure tutorial/doesnotexist # exit 1
 An error occurred (ResourceNotFoundException) when calling the DescribeSecret operation: Secrets Manager can't find the specified secret.
 ```
 
+KV
+
+```
+$ secret write tutorial/json file://fixtures/testcreds.json
+{
+    "ARN": "arn:aws:secretsmanager:eu-west-1:888888:secret:tutorial/json",
+    "Name": "turial/json",
+    "VersionId": "6e3e99b1-0b9a-4482-9722-6261bc70ad40"
+}
+
+$ secret read tutorial/json
+{
+   "mongodb_user": "abcd",
+   "mongodb_password": "efgh",
+   "mongodb_db": "db",
+   "mongodb_port": "3000",
+   "mongodb_url": "https://mongodb.com"
+}
+```
+
 Installation
 =================
 ```
-curl -o secret https://raw.githubusercontent.com/kenichi-shibata/aws-secrets-manager-cli/master/secret 
+curl -o secret https://raw.githubusercontent.com/kenichi-shibata/aws-secrets-manager-cli/master/secret
 chmod +x secret
 sudo mv secret /usr/local/bin
 ```
